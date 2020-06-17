@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__.'/init.php';
+
+use Utopia\CLI\CLI;
+use Utopia\CLI\Console;
+
+$cli = new CLI();
+
+$cli
+    ->task('setKey')
+    ->desc('Validate server certificates')
+    ->action(function () {
+        Console::success('Hello');
+    });
+
+$cli->run();
